@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import RatingReview from "./RatingReview.jsx";
+import { motion } from "framer-motion";
 
 const Item = ({item, setCartCount, discount}) => {
     return (
@@ -21,7 +22,7 @@ const Item = ({item, setCartCount, discount}) => {
                     </p>
                     <p className='flex mobile:pt-2 desktop:p-0'><RatingReview rating={item.rating.rate} />({item.rating.count})</p>
                 </div>
-                <button className='p-2 my-2 bg-[#BF00FF] laptop:w-1/3 rounded-lg self-center text-white text-sm mobile:text-xs mobile:w-8/12' onClick={() => setCartCount('increment_cart')}>Add To Cart</button>
+                <motion.button whileHover={{scale:1.1}} whileTap={{scale:0.9}} className='p-2 my-2 bg-[#BF00FF] laptop:w-1/3 rounded-lg self-center text-white text-sm mobile:text-xs mobile:w-8/12' onClick={() => setCartCount('increment_cart')}>Add To Cart</motion.button>
             </div>
         </>
     );
