@@ -32,7 +32,6 @@ describe('Given <App />', () => {
         await waitFor(() => {
             expect(fetch).toBeCalled();
         });
-        console.log(result);
         expect(result.getByRole('paragraph')).toHaveTextContent(/A network error was encountered/)
     });
 

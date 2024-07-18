@@ -11,7 +11,6 @@ const Shop = ({ setCartCount }) => {
 
     const updateItems = (category, filter) => {
         let newItemList = shoppingData;
-
         if(category !== 'All') {
             newItemList = newItemList.filter((item) => item.category === category);
         }
